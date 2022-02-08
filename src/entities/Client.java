@@ -30,7 +30,7 @@ public class Client {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name);
+		return Objects.hash(email, name);
 	}
 
 	@Override
@@ -42,8 +42,8 @@ public class Client {
 		if (getClass() != obj.getClass())
 			return false;
 		Client other = (Client) obj;
-		return Objects.equals(name, other.name);
+		return Objects.equals(email, other.email) && Objects.equals(name, other.name);
 	}
-	
+
 	
 }
